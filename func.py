@@ -14,6 +14,7 @@ def login(driver, userName, password):
     iaaaUrl = 'https://iaaa.pku.edu.cn/iaaa/oauth.jsp'
     appName = quote('北京大学校内信息门户新版')
     redirectUrl = 'https://portal.pku.edu.cn/portal2017/ssoLogin.do'
+    driver.get(f'https://portal.pku.edu.cn/portal2017/')
 
     for i in range(3):
         driver.get(
@@ -31,7 +32,7 @@ def login(driver, userName, password):
             print('门户登录成功！')
             break
         except:
-            print('Retrying...（第一次很正常）')
+            print('Retrying...')
         if i == 2:
             raise Exception('门户登录失败')
 
