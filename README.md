@@ -17,7 +17,7 @@ PKU一键出入校备案小工具 v1.0 (2020.10.4)
 
 ### Python 3
 
-本项目至少需要 Python 3，可以从[Python 官网](https://www.python.org/) 下载安装
+本项目至少需要 Python 3，可以从[Python 官网](https://www.python.org/)下载安装
 
 本项目采用 Python 3.7.4 开发，由于含有 `f-string` ，请至少使用 Python 3.6 及以上版本，建议使用 Python 3.7 及以上版本
 
