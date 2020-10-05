@@ -1,6 +1,7 @@
 from configparser import ConfigParser
 from func import *
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 if __name__ == '__main__':
@@ -16,8 +17,12 @@ if __name__ == '__main__':
 
     print('Driver Launching...')
     
-    driver_pjs = webdriver.PhantomJS(
-        executable_path='./phantomjs/bin/phantomjs.exe')
+    if os.name == "nt":
+        driver_pjs = webdriver.PhantomJS(
+            executable_path='./phantomjs/bin/phantomjs.exe')
+    else:
+        driver_pjs = webdriver.PhantomJS(
+            executable_path='./phantomjs/bin/phantomjs')
     run(driver_pjs, userName, password, campus, reason, destination, track,
         habitation, district, street, capture, path)
     driver_pjs.quit()
