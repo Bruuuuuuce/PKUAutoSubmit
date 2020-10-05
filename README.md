@@ -5,7 +5,7 @@ PKU一键出入校备案小工具 v1.9 (2020.10.5)
 
 **P.S.** 由于作者水平与精力所限，暂时仅提供 win x64 版本（ x86 请自行测试），mac OS 版本可能会在之后推出，也欢迎自行修改开发（理论上只需要更换 `PhantomJS` 版本即可）
 
-**Update:** 现已支持 mac OS（感谢 JuiAnHsu 的 contribution），欢迎各使用 mac OS 系统的小伙伴们参与使用与开发改进
+**Update:** 现已支持 mac OS（感谢 JuiAnHsu 的 contribution），欢迎各使用 mac OS 系统的小伙伴们参与使用与开发升级
 
 **Note:** 由于 `run.bat` 和 `autoRun.bat` 为 Windows 批处理程序，无法在 mac OS 上运行，故 mac OS 中的定时运行功能仍在开发中
 
