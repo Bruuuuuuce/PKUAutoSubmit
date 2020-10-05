@@ -9,6 +9,8 @@ PKU一键出入校备案小工具 v1.9 (2020.10.5)
 
 **Note:** 由于 `run.bat` 和 `autoRun.bat` 为 Windows 批处理程序，无法在 mac OS 上运行，故 mac OS 中的定时运行功能仍在开发中
 
+**Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)
+
 ## 说明
 
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
