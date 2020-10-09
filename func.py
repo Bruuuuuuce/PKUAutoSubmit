@@ -14,7 +14,7 @@ def login(driver, userName, password):
     iaaaUrl = 'https://iaaa.pku.edu.cn/iaaa/oauth.jsp'
     appName = quote('北京大学校内信息门户新版')
     redirectUrl = 'https://portal.pku.edu.cn/portal2017/ssoLogin.do'
-    driver.get(f'https://portal.pku.edu.cn/portal2017/')
+    driver.get('https://portal.pku.edu.cn/portal2017/')
 
     for i in range(3):
         driver.get(
@@ -52,8 +52,15 @@ def go_to_application_out(driver):
 
 
 def go_to_application_in(driver):
-    driver.back()
-    driver.back()
+    driver.get('https://portal.pku.edu.cn/portal2017/#/bizCenter')
+    WebDriverWait(driver,
+                  3).until(EC.visibility_of_element_located((By.ID, 'all')))
+    driver.find_element_by_id('all').click()
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
+    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
+    time.sleep(0.5)
+    driver.switch_to.window(driver.window_handles[-1])
     WebDriverWait(driver, 5).until(
         EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
     driver.find_element_by_class_name('el-card__body').click()
