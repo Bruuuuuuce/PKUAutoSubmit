@@ -1,10 +1,10 @@
 /usr/local/envs/workenv/bin/python main.py \
-    -u $1 \
-    -p $2 \
-    --campus $3 \
-    --reason $4 \
-    --destination $5 \
-    --track $6 \
-    --habitation $7 \
-    --district $8 \
-    --street $9
+    -u "${INPUT_USERNAME}" \
+    -p "${INPUT_PASSWORD}" \
+    --campus "${INPUT_CAMPUS}" \
+    --reason "${INPUT_REASON}" \
+    --destination "${INPUT_DESTINATION}" \
+    --track "${INPUT_TRACK}" \
+    --habitation "${INPUT_HABITATION}" \
+    --district "${INPUT_DISTRICT}" \
+    --street "${INPUT_STREET}"
