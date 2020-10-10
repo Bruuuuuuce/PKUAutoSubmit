@@ -1,3 +1,5 @@
+# -*- coding: utf-8
+import env_check
 from configparser import ConfigParser
 from func import *
 import warnings
