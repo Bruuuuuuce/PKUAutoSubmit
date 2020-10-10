@@ -9,7 +9,7 @@ PKU一键出入校备案小工具 v2.0 (2020.10.10)
 
 **Note:** 由于 `run.bat` 和 `autoRun.bat` 为 Windows 批处理程序，无法在 mac OS 上运行，故 mac OS 中的定时运行功能仍在开发中
 
-**Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)
+**Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)，与 GitHub 保持同步更新
 
 **Update:** 修复填报入校备案时可能出现的会话失效导致填报失败的问题
 
