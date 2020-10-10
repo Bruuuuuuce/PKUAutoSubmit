@@ -1,5 +1,5 @@
 # PKUAutoSubmit
-PKU一键出入校备案小工具 v1.9.1 (2020.10.10)
+PKU一键出入校备案小工具 v2.0 (2020.10.10)
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与改进
 
@@ -12,6 +12,8 @@ PKU一键出入校备案小工具 v1.9.1 (2020.10.10)
 **Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)
 
 **Update:** 修复填报入校备案时可能出现的会话失效导致填报失败的问题
+
+**Update:** 现已支持 mac OS 的定时运行（感谢 HuangLianzhe 的 contribution），并加入了运行前环境检查
 
 ## 说明
 
@@ -52,7 +54,13 @@ pip3 install selenium
 
 ## 定时运行
 
+### Windows
+
 本项目中的 `autoRun.bat` 文件可提供在静默免打扰情况下运行程序的选择，配合 Windows 任务计划管理可实现定期自动填报，具体请参考[Win10下定时启动程序或脚本](https://blog.csdn.net/xielifu/article/details/81016220)
+
+### mac OS
+
+进入项目根目录，以命令 `./macAutoRun.sh` 执行 `macAutoRun.sh` 脚本即可
 
 **Note:** 静默运行的弊端为无法看到任何报错信息，若程序运行有错误，使用者很难得知。故建议采用定时静默运行时，设置备案历史截图功能并定期查看截图，若截图生成说明已成功运行，并可通过查看截图进一步确认。
 
