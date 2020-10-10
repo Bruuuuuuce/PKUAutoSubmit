@@ -1,6 +1,8 @@
 import env_check
 from crontab import CronTab
 import os
+import sys
+import getopt
 
 
 def set_crontab():
@@ -18,6 +20,26 @@ def set_crontab():
 	job.enable()
 	user_cron.write()
 
+def reset_crontab():
+	user_cron = CronTab(user=True)
+	script_path = os.path.join(os.getcwd(), 'main.py')
+	count = 0
+	for job in user_cron:
+		if job.command == f'python3 {script_path}':
+			user_cron.remove(job)
+			user_cron.write()
+			count += 1
+
+	print(f'成功清除{count}项定时任务~')
 
 if __name__ == '__main__':
-	set_crontab()
+	opts, args = getopt.getopt(sys.argv[1:], "c") 
+	is_reset = False
+	for cmd, arg in opts:
+		if cmd == "-c":
+			is_reset = True
+
+	if is_reset:
+		reset_crontab()
+	else:
+		set_crontab()
