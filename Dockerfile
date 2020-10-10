@@ -19,6 +19,7 @@ WORKDIR /workspace
 ADD main.py /workspace/main.py
 ADD entrypoint.sh /workspace/entrypoint.sh
 ADD phantomjs/phantomjs-linux-x86_64 /workspace/phantomjs/phantomjs-linux-x86_64
-RUN conda create -n workenv python selenium firefox geckodriver -c conda-forge --yes
+RUN conda create -n workenv python selenium -c conda-forge --yes
+# RUN conda create -n workenv python selenium firefox geckodriver -c conda-forge --yes
 
 ENTRYPOINT [ "entrypoint.sh" ]
