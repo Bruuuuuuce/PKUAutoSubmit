@@ -49,7 +49,7 @@ pip3 install selenium
 2. 用文本编辑器（建议代码编辑器）打开 `config.ini` 文件
 3. 配置 `[login]` 、`[common]` 、`[out]`、`[in]`、`[capture]` 这几个 Section 下的变量，在 `config.ini` 文件内有详细注释
 4. 进入项目根目录，以命令 `python main.py` 运行主程序即可
-   - 亦可双击 `run.bat` 运行
+   - 亦可双击 `run.bat` 运行（仅限 Windows 系统）
    - 亦可用代码编辑器打开 `main.py` 并运行（并不推荐）
 
 ## 定时运行
