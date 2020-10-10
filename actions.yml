@@ -1,0 +1,53 @@
+name: 'PKUAutoSubmit'
+
+description: '百带云战疫助手，每日自动填报云战役'
+
+inputs:
+  username:
+    description: 'IAAA 用户，比如 2000010001'
+    required: true
+  password:
+    description: 'IAAA 密码'
+    required: true
+  campus:
+    description: '所在校区，比如 燕园'
+    required: true
+    default: '燕园'
+  reason:
+    description: '出校原因，比如 吃饭'
+    required: true
+    default: '吃饭'
+  destination:
+    description: '出校目的地，比如 北京'
+    required: true
+    default: '北京'
+  track:
+    description: '出校轨迹，比如 畅春园食堂'
+    required: true
+    default: '畅春园'
+  habitation:
+    description: '入校前居住地'
+    required: true
+    default: '北京'
+  district:
+    description: '入校前居住地所在区'
+    required: true
+    default: '海淀区'
+  street:
+    description: '入校前居住地所在街道'
+    required: true
+    default: '燕园街道'  
+  
+outputs:
+
+runs:
+  using: "composite"
+  steps: 
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+        architecture: 'x64'
+    - uses: actions/checkout@v2
+      with:
+        repository: 'YOUSIKI/PKUAutoSubmit'
+    - runs: ls
