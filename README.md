@@ -15,6 +15,8 @@ PKU一键出入校备案小工具 v2.1 (2020.10.11)
 
 **Update:** 现已支持 mac OS 的定时运行（感谢 HuangLianzhe 的 contribution），并加入了运行前环境检查
 
+**Note:** 已发布 Windows 和 mac OS 系统对应的 release，欢迎下载使用，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘
+
 ## 说明
 
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
@@ -71,7 +73,6 @@ pip3 install selenium
    - `driver` 启动后第一次通过 iaaa 认证必触发一次 500 错误，通过 `headers` 设置也无法改善问题，故在运行中有所标注，一般仅需 Retry 一次即可。限于作者水平，还未找出具体原因，若有发现的欢迎 report（已修复，感谢 RainshawGao 的 contribution）
    - 由于仅为练手项目，对于学校土豆服务器造成的各类玄学问题作者只能尽力避免，但并无完善的 Exception 处理机制，若遇到报错欢迎 report，且万能的重来一次大法可以解决绝大多数问题
 3. 当前看来，无论出不出学校都可以填报备案，所以每天定时运行一次并没有什么问题（事实上，作者在测试阶段每天填几十次，希望人没事.jpg）
-4. 项目中的 `\phantomjs\bin\` 目录下有两个应用程序 `phantomjs` 和 `phantomjs.exe`，分别对应 mac OS 和 Windows 的版本，为节省空间，可在确保运行无差错后删除另一个
 
 ## 责任须知
 
