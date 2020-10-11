@@ -242,8 +242,6 @@ if __name__ == '__main__':
     print('Arguments: {}'.format(args_public))
     print('Driver Launching...')
 
-    exit(0)
-
     # driver = Firefox()
     # driver = Chrome()
 
