@@ -1,4 +1,17 @@
-# PKUAutoSubmit
+# PKUAutoSubmit (modified)
+
+## What did I do
+
+没做什么工作，只是合并为一个 main.py 然后改了改参数读取方式。然后写了个 Github Actions 的配置文件，每天自动执行两次。你可以 fork 本仓库然后在自己仓库的 Settings/Secrets 中设置 USERNAME 和 PASSWORD 两项，一劳永逸。如果你想使用其他填报参数，请自行修改 `.github/workflows/main.yml`，参数名称参见 `main.py`。
+
+感谢原作者！
+
+---
+
+以下为原作者 README
+
+---
+
 PKU一键出入校备案小工具 v1.9.1 (2020.10.10)
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与改进
