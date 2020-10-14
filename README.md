@@ -88,7 +88,7 @@ pip3 install selenium
 ### version 2.0
 
 - 发布于 2020.10.10
-- 支持 mac OS 设置定时运行，并加入运行前环境检查（感谢 HuangLianzhe 的 contribution）
+- 支持 mac OS 设置定时运行，并加入运行前环境检查（感谢 mojave 的 contribution）
 
 ### version 1.9.1
 
@@ -103,7 +103,7 @@ pip3 install selenium
 ### version 1.1
 
 - 发布于 2020.10.5
-- 修复 iaaa 认证时第一次必触发 500 错误的问题（感谢 RainshawGao 的 contribution）
+- 修复 iaaa 认证时第一次必触发 500 错误的问题（感谢 Rainshaw 的 contribution）
 
 ### version 1.0
 
