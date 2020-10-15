@@ -233,7 +233,7 @@ def run(driver, username, password, campus, reason, destination, track,
     go_to_application_in(driver)
     fill_in(driver, campus, reason, habitation, district, street)
     
-    screen_capture(driver, path)
+    screen_capture(driver)
 
     print('=================================')
     print('可以愉快的玩耍啦！')
