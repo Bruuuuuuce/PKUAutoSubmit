@@ -16,6 +16,8 @@ if __name__ == '__main__':
     habitation, district, street = dict(conf['in']).values()
     capture = conf.getboolean('capture', '是否需要备案历史截图')
     path = conf['capture']['截图保存路径']
+    wechat = conf.getboolean('wechat', '是否需要微信通知')
+    sckey = conf['wechat']['SCKEY']
 
     print('Driver Launching...')
     
@@ -26,5 +28,5 @@ if __name__ == '__main__':
         driver_pjs = webdriver.PhantomJS(
             executable_path='./phantomjs/bin/phantomjs')
     run(driver_pjs, userName, password, campus, reason, destination, track,
-        habitation, district, street, capture, path)
+        habitation, district, street, capture, path, wechat, sckey)
     driver_pjs.quit()
