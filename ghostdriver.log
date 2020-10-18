@@ -1,83 +1,47 @@
-[INFO  - 2020-10-18T12:35:50.747Z] GhostDriver - Main - running on port 59937
-[INFO  - 2020-10-18T12:35:51.200Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-10-18T12:35:51.200Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.customHeaders:  - {}
-[INFO  - 2020-10-18T12:35:51.200Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2020-10-18T12:35:51.200Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 74e87cd0-113e-11eb-b3d1-dd7c5460294c
-[ERROR - 2020-10-18T12:35:51.627Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - msg: Error: [$compile:tpload] http://errors.angularjs.org/1.2.8/$compile/tpload?p0=app%2Fdirect%2Ftpl%2FheaderLogin.html%3F_v%3D20200520
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:55:459
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:66:439
-y@https://portal.pku.edu.cn/portal2017/js/angular.min.js:92:771
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:94:143
-$eval@https://portal.pku.edu.cn/portal2017/js/angular.min.js:102:293
-$digest@https://portal.pku.edu.cn/portal2017/js/angular.min.js:100:55
-$apply@https://portal.pku.edu.cn/portal2017/js/angular.min.js:103:107
-f@https://portal.pku.edu.cn/portal2017/js/angular.min.js:67:104
-E@https://portal.pku.edu.cn/portal2017/js/angular.min.js:71:86
-onreadystatechange@https://portal.pku.edu.cn/portal2017/js/angular.min.js:72:134
-openUrl@[native code]
-open@phantomjs://platform/webpage.js:281:25
-phantomjs://code/session_request_handler.js:495:36
-_execFuncAndWaitForLoadDecorator@phantomjs://code/session.js:212:23
-_postUrlCommand@phantomjs://code/session_request_handler.js:494:46
-_handle@phantomjs://code/session_request_handler.js:91:32
-_reroute@phantomjs://code/request_handler.js:61:20
-_handle@phantomjs://code/router_request_handler.js:78:46
+[INFO  - 2020-10-18T12:38:55.971Z] GhostDriver - Main - running on port 60365
+[INFO  - 2020-10-18T12:38:56.420Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-10-18T12:38:56.420Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.customHeaders:  - {}
+[INFO  - 2020-10-18T12:38:56.420Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2020-10-18T12:38:56.420Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e34ed110-113e-11eb-b4b8-e9c976ab1694
+[ERROR - 2020-10-18T12:38:56.832Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - msg: 404
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.627Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - stack:
+[ERROR - 2020-10-18T12:38:56.833Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - stack:
   (anonymous function) (https://portal.pku.edu.cn/portal2017/js/angular.min.js:84)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.627Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - msg: 404
+[ERROR - 2020-10-18T12:38:56.833Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - msg: 404
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.627Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - stack:
+[ERROR - 2020-10-18T12:38:56.833Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - stack:
   (anonymous function) (https://portal.pku.edu.cn/portal2017/js/angular.min.js:84)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.628Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - msg: 404
+[ERROR - 2020-10-18T12:38:56.835Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - msg: 404
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.628Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - stack:
+[ERROR - 2020-10-18T12:38:56.835Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - stack:
   (anonymous function) (https://portal.pku.edu.cn/portal2017/js/angular.min.js:84)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.629Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - msg: Error: [$compile:tpload] http://errors.angularjs.org/1.2.8/$compile/tpload?p0=app%2Fdirect%2Ftpl%2Fheader.html%3F_v%3D20200520
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:55:459
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:66:439
-y@https://portal.pku.edu.cn/portal2017/js/angular.min.js:92:771
-https://portal.pku.edu.cn/portal2017/js/angular.min.js:94:143
-$eval@https://portal.pku.edu.cn/portal2017/js/angular.min.js:102:293
-$digest@https://portal.pku.edu.cn/portal2017/js/angular.min.js:100:55
-$apply@https://portal.pku.edu.cn/portal2017/js/angular.min.js:103:107
-f@https://portal.pku.edu.cn/portal2017/js/angular.min.js:67:104
-E@https://portal.pku.edu.cn/portal2017/js/angular.min.js:71:86
-onreadystatechange@https://portal.pku.edu.cn/portal2017/js/angular.min.js:72:134
-openUrl@[native code]
-open@phantomjs://platform/webpage.js:281:25
-phantomjs://code/session_request_handler.js:495:36
-_execFuncAndWaitForLoadDecorator@phantomjs://code/session.js:212:23
-_postUrlCommand@phantomjs://code/session_request_handler.js:494:46
-_handle@phantomjs://code/session_request_handler.js:91:32
-_reroute@phantomjs://code/request_handler.js:61:20
-_handle@phantomjs://code/router_request_handler.js:78:46
+[ERROR - 2020-10-18T12:38:57.484Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1603024737463
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.629Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - stack:
-  (anonymous function) (https://portal.pku.edu.cn/portal2017/js/angular.min.js:84)
+[INFO  - 2020-10-18T12:38:58.411Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-10-18T12:38:58.411Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.customHeaders:  - {}
+[ERROR - 2020-10-18T12:39:00.714Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not an object (evaluating 't.response.data')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.630Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - msg: 404
+[ERROR - 2020-10-18T12:39:00.715Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - stack:
+  exports (https://simso.pku.edu.cn/js/chunk-epidemicAccess-vendors.b018f88b.js:7)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:51.630Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.onError - stack:
-  (anonymous function) (https://portal.pku.edu.cn/portal2017/js/angular.min.js:84)
+[ERROR - 2020-10-18T12:39:00.715Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not an object (evaluating 't.response.data')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-10-18T12:35:52.278Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1603024552256
+[ERROR - 2020-10-18T12:39:00.715Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.onError - stack:
+  exports (https://simso.pku.edu.cn/js/chunk-epidemicAccess-vendors.b018f88b.js:7)
 
   phantomjs://platform/console++.js:263 in error
-[INFO  - 2020-10-18T12:35:53.308Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-10-18T12:35:53.308Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.customHeaders:  - {}
-[INFO  - 2020-10-18T12:35:55.945Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-10-18T12:35:55.945Z] Session [74e87cd0-113e-11eb-b3d1-dd7c5460294c] - page.customHeaders:  - {}
+[INFO  - 2020-10-18T12:39:01.134Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-10-18T12:39:01.134Z] Session [e34ed110-113e-11eb-b4b8-e9c976ab1694] - page.customHeaders:  - {}
