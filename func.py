@@ -60,11 +60,11 @@ def go_to_application_out(driver):
 def go_to_application_in(driver, userName, password):
     driver.back()
     driver.back()
-    WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
-    time.sleep(0.5)
-    driver.find_element_by_class_name('el-card__body').click()
     try:
+        WebDriverWait(driver, 5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
+        time.sleep(0.5)
+        driver.find_element_by_class_name('el-card__body').click()
         WebDriverWait(driver, 5).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
     except:
