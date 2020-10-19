@@ -60,8 +60,8 @@ def mail():
         ret = False
     return ret
 
-TIMEOUT = 10
-TIMESLP = .5
+TIMEOUT = 20
+TIMESLP = 3
 
 def login(driver, username, password, failed=0):
     if failed == 3:
