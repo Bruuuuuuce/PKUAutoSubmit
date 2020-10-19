@@ -89,6 +89,7 @@ pip3 install selenium
 - 加入微信推送功能（感谢 XiaoTian 的 contribution）
 - 修复填报逻辑问题可能引发的错误
 - 终极修复【希望吧】可能的会话失效导致填报失败的问题
+- 统一代码风格
 
 ### version 2.1
 
