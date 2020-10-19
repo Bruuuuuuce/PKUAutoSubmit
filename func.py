@@ -205,7 +205,7 @@ def fill_in(driver, campus, reason, habitation, district, street):
 
 def wechat_notification(userName, sckey):
     http = urllib3.PoolManager()
-    response = json.loads(http.request('GET', 'https://sc.ftqq.com/'+sckey+'.send?text=成功报备desp=学号'+str(userName)+'成功报备').data.decode('utf-8'))
+    response = json.loads(http.request('GET', 'https://sc.ftqq.com/'+sckey+'.send?text=成功报备&desp=学号'+str(userName)+'成功报备').data.decode('utf-8'))
     if response['errmsg'] == 'success':
         print('微信通知成功！')
     else:
