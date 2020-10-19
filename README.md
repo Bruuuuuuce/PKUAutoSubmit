@@ -1,5 +1,5 @@
 # PKUAutoSubmit
-PKU一键出入校备案小工具 v2.1 (2020.10.13)
+PKU一键出入校备案小工具 v2.3 (2020.10.19)
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进
 
@@ -9,7 +9,7 @@ PKU一键出入校备案小工具 v2.1 (2020.10.13)
 
 **Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)，与 GitHub 保持同步更新
 
-**Note:** 已发布 Windows 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘
+**Note:** 已发布 Windows 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘，如果仅需要使用可直接下载相应的 release
 
 ## 说明
 
@@ -43,7 +43,7 @@ pip3 install selenium
 
 1. 将 `config.sample.ini` 文件重命名为 `config.ini` ，请不要新建文件，不然自己搞定编码问题
 2. 用文本编辑器（建议代码编辑器）打开 `config.ini` 文件
-3. 配置 `[login]` 、`[common]` 、`[out]`、`[in]`、`[capture]` 这几个 Section 下的变量，在 `config.ini` 文件内有详细注释
+3. 配置 `[login]` 、`[common]` 、`[out]`、`[in]`、`[capture]`、`[wechat]` 这几个 Section 下的变量，在 `config.ini` 文件内有详细注释
 4. 进入项目根目录，以命令 `python main.py` 运行主程序即可
    - 亦可双击 `run.bat` 运行（仅限 Windows 系统）
    - 亦可用代码编辑器打开 `main.py` 并运行（并不推荐）
@@ -58,7 +58,11 @@ pip3 install selenium
 
 进入项目根目录，以命令 `./macAutoRun.sh` 执行 `macAutoRun.sh` 脚本即可，可设定或取消定时运行
 
-**Note:** 静默运行的弊端为无法看到任何报错信息，若程序运行有错误，使用者很难得知。故建议采用定时静默运行时，设置备案历史截图功能并定期查看截图，若截图生成说明已成功运行，并可通过查看截图进一步确认。
+**Note:** 静默运行的弊端为无法看到任何报错信息，若程序运行有错误，使用者很难得知。故建议采用定时静默运行时，设置备案历史截图功能并定期查看截图，若截图生成说明已成功运行，并可通过查看截图进一步确认。或者设置微信推送，在移动端即可查看运行结果。
+
+### 微信推送
+
+本项目支持基于[Server酱](https://sc.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
 
 ## 补充说明
 
@@ -78,6 +82,13 @@ pip3 install selenium
 [Apache License 2.0](https://github.com/Bruuuuuuce/PKUAutoSubmit/blob/main/LICENSE)
 
 ## 版本历史
+
+### version 2.3
+
+- 发布于 2020.10.19
+- 加入微信推送功能（感谢 XiaoTian 的 contribution）
+- 修复填报逻辑问题可能引发的错误
+- 终极修复【希望吧】可能的会话失效导致填报失败的问题
 
 ### version 2.1
 
