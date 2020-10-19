@@ -39,58 +39,72 @@ def login(driver, userName, password):
             raise Exception('门户登录失败')
 
 
+def go_to_simso(driver):
+    driver.find_element_by_id('all').click()
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
+    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
+    time.sleep(0.5)
+    driver.switch_to.window(driver.window_handles[-1])
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
+
+
 def go_to_application_out(driver):
-    driver.find_element_by_id('all').click()
-    WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
-    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
-    time.sleep(0.5)
-    driver.switch_to.window(driver.window_handles[-1])
-    WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
+    go_to_simso(driver)
     driver.find_element_by_class_name('el-card__body').click()
     WebDriverWait(driver, 5).until(
         EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
 
 
-def go_to_application_in(driver):
-    driver.get('https://portal.pku.edu.cn/portal2017/#/bizCenter')
-    WebDriverWait(driver,
-                  3).until(EC.visibility_of_element_located((By.ID, 'all')))
-    driver.find_element_by_id('all').click()
-    WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
-    driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
-    time.sleep(0.5)
-    driver.switch_to.window(driver.window_handles[-1])
+def go_to_application_in(driver, userName, password):
+    driver.back()
+    driver.back()
     WebDriverWait(driver, 5).until(
         EC.visibility_of_element_located((By.CLASS_NAME, 'el-card__body')))
+    time.sleep(0.5)
     driver.find_element_by_class_name('el-card__body').click()
-    WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
+    try:
+        WebDriverWait(driver, 5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
+    except:
+        print('检测到会话失效，重新登陆中...')
+        login(driver, userName, password)
+        go_to_simso(driver)
+        driver.find_element_by_class_name('el-card__body').click()
+        WebDriverWait(driver, 5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, 'el-select')))
 
 
 def select_in_out(driver, way):
     driver.find_element_by_class_name('el-select').click()
-    time.sleep(0.1)
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located(
+            (By.XPATH, f'//li/span[text()="{way}"]')))
     driver.find_element_by_xpath(f'//li/span[text()="{way}"]').click()
 
 
 def select_campus(driver, campus):
     driver.find_elements_by_class_name('el-select')[1].click()
-    time.sleep(0.1)
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located(
+            (By.XPATH, f'//li/span[text()="{campus}"]')))
     driver.find_element_by_xpath(f'//li/span[text()="{campus}"]').click()
 
 
 def select_destination(driver, destination):
     driver.find_elements_by_class_name('el-select')[2].click()
-    time.sleep(0.1)
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located(
+            (By.XPATH, f'//li/span[text()="{destination}"]')))
     driver.find_element_by_xpath(f'//li/span[text()="{destination}"]').click()
 
 
 def select_district(driver, district):
     driver.find_elements_by_class_name('el-select')[3].click()
-    time.sleep(0.1)
+    WebDriverWait(driver, 5).until(
+        EC.visibility_of_element_located(
+            (By.XPATH, f'//li/span[text()="{district}"]')))
     driver.find_element_by_xpath(f'//li/span[text()="{district}"]').click()
 
 
@@ -204,13 +218,18 @@ def fill_in(driver, campus, reason, habitation, district, street):
 
     print('入校备案填报完毕！')
 
+
 def wechat_notification(userName, sckey):
-    with request.urlopen(quote('https://sc.ftqq.com/'+sckey+'.send?text=成功报备&desp=学号'+str(userName)+'成功报备', safe='/:?=&')) as response:
+    with request.urlopen(
+            quote('https://sc.ftqq.com/' + sckey + '.send?text=成功报备&desp=学号' +
+                  str(userName) + '成功报备',
+                  safe='/:?=&')) as response:
         response = json.loads(response.read().decode('utf-8'))
     if response['errmsg'] == 'success':
         print('微信通知成功！')
     else:
         print(str(response['errno']) + ' error: ' + response['errmsg'])
+
 
 def run(driver, userName, password, campus, reason, destination, track,
         habitation, district, street, capture, path, wechat, sckey):
@@ -221,16 +240,18 @@ def run(driver, userName, password, campus, reason, destination, track,
     fill_out(driver, campus, reason, destination, track)
     print('=================================')
 
-    go_to_application_in(driver)
+    go_to_application_in(driver, userName, password)
     fill_in(driver, campus, reason, habitation, district, street)
-    if capture == True:
-        print('=================================')
-        screen_capture(driver, path)
     print('=================================')
+
+    if capture:
+        screen_capture(driver, path)
+        print('=================================')
 
     if wechat:
         wechat_notification(userName, sckey)
-    
+        print('=================================')
+
     print('可以愉快的玩耍啦！')
 
 
