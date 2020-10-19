@@ -5,9 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 from urllib.parse import quote
+from urllib import request
 import time
 import warnings
-import urllib3, json
+import json
 warnings.filterwarnings('ignore')
 
 
@@ -204,8 +205,8 @@ def fill_in(driver, campus, reason, habitation, district, street):
     print('入校备案填报完毕！')
 
 def wechat_notification(userName, sckey):
-    http = urllib3.PoolManager()
-    response = json.loads(http.request('GET', 'https://sc.ftqq.com/'+sckey+'.send?text=成功报备&desp=学号'+str(userName)+'成功报备').data.decode('utf-8'))
+    with request.urlopen(quote('https://sc.ftqq.com/'+sckey+'.send?text=成功报备&desp=学号'+str(userName)+'成功报备', safe='/:?=')) as response:
+        response = json.loads(response.read().decode('utf-8'))
     if response['errmsg'] == 'success':
         print('微信通知成功！')
     else:
@@ -228,7 +229,6 @@ def run(driver, userName, password, campus, reason, destination, track,
     print('=================================')
 
     if wechat:
-        print(sckey)
         wechat_notification(userName, sckey)
     
     print('可以愉快的玩耍啦！')
