@@ -20,7 +20,7 @@ if __name__ == '__main__':
     sckey = conf['wechat']['SCKEY']
 
     print('Driver Launching...')
-    
+
     if os.name == "nt":
         driver_pjs = webdriver.PhantomJS(
             executable_path='./phantomjs/bin/phantomjs.exe')
