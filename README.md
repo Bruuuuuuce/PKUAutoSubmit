@@ -93,6 +93,7 @@ pip3 install selenium
 
 - 发布于 2020.10.19
 - 加入微信推送功能（感谢 XiaoTian 的 contribution）
+- 支持 Linux 系统
 - 修复填报逻辑问题可能引发的错误
 - 终极修复【希望吧】可能的会话失效导致填报失败的问题
 - 统一代码风格
