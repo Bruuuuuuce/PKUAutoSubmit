@@ -1,5 +1,5 @@
 # PKUAutoSubmit
-PKU一键出入校备案小工具 v2.3 (2020.10.19)
+PKU一键出入校备案小工具 v2.3 (2020.10.21)
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进
 
@@ -9,7 +9,9 @@ PKU一键出入校备案小工具 v2.3 (2020.10.19)
 
 **Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)，与 GitHub 保持同步更新
 
-**Note:** 已发布 Windows 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘，如果仅需要使用可直接下载相应的 release
+**Note:** 已发布 Windows、Linux 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘，如果仅需要使用可直接下载相应的 release
+
+**Note:** 为保证 repo 的轻便，不再于源码部分加入 Linux 版本的 `PhantomJS` ，若有需要请下载对应的 release，或于[官网](https://phantomjs.org/download.html)下载
 
 ## 说明
 
@@ -58,11 +60,15 @@ pip3 install selenium
 
 进入项目根目录，以命令 `./macAutoRun.sh` 执行 `macAutoRun.sh` 脚本即可，可设定或取消定时运行
 
-**Note:** 静默运行的弊端为无法看到任何报错信息，若程序运行有错误，使用者很难得知。故建议采用定时静默运行时，设置备案历史截图功能并定期查看截图，若截图生成说明已成功运行，并可通过查看截图进一步确认。或者设置微信推送，在移动端即可查看运行结果。
+### Linux
+
+使用 Linux 系统的小伙伴们想必有一定的 shell 基础，那大佬们就自行用 `crontab` 设置吧~
 
 ### 微信推送
 
 本项目支持基于[Server酱](https://sc.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
+
+**Note:** 静默运行的弊端为无法看到任何报错信息，若程序运行有错误，使用者很难得知。故建议采用定时静默运行时，设置备案历史截图功能并定期查看截图，若截图生成说明已成功运行。或者设置微信推送，在移动端即可查看运行结果。
 
 ## 补充说明
 
