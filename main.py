@@ -11,12 +11,8 @@ def sys_path():
     path = './phantomjs/bin/'
     if sys.platform.startswith('win'):
         return path + 'phantomjs.exe'
-    elif sys.platform.startswith('linux'):
-        return path + 'phantomjs_linux'
-    elif sys.platform.startswith('darwin'):
-        return path + 'phantomjs'
     else:
-        raise Exception('暂不支持该系统')
+        return path + 'phantomjs'
 
 
 if __name__ == '__main__':
