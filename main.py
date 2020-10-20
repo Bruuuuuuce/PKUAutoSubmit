@@ -3,8 +3,21 @@ import env_check
 from configparser import ConfigParser
 from func import *
 import warnings
-import os
+import sys
 warnings.filterwarnings('ignore')
+
+
+def sys_path():
+    path = './phantomjs/bin/'
+    if sys.platform.startswith('win'):
+        return path + 'phantomjs.exe'
+    elif sys.platform.startswith('linux'):
+        return path + 'phantomjs_linux'
+    elif sys.platform.startswith('darwin'):
+        return path + 'phantomjs'
+    else:
+        raise Exception('暂不支持该系统')
+
 
 if __name__ == '__main__':
     conf = ConfigParser()
@@ -21,12 +34,7 @@ if __name__ == '__main__':
 
     print('Driver Launching...')
 
-    if os.name == "nt":
-        driver_pjs = webdriver.PhantomJS(
-            executable_path='./phantomjs/bin/phantomjs.exe')
-    else:
-        driver_pjs = webdriver.PhantomJS(
-            executable_path='./phantomjs/bin/phantomjs')
+    driver_pjs = webdriver.PhantomJS(executable_path=sys_path())
     run(driver_pjs, userName, password, campus, reason, destination, track,
         habitation, district, street, capture, path, wechat, sckey)
     driver_pjs.quit()
