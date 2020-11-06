@@ -32,6 +32,9 @@ def login(driver, userName, password, retry=0):
     time.sleep(0.1)
     driver.find_element_by_id('password').send_keys(password)
     time.sleep(0.1)
+    if (driver.find_element_by_id('otp_area').get_attribute("style")!="display: none;"):
+        driver.find_element_by_id('otp_code').send_keys(input("手机令牌(otp code):"))
+        time.sleep(0.1)
     driver.find_element_by_id('logon_button').click()
     try:
         WebDriverWait(driver,
