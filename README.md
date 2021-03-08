@@ -20,7 +20,7 @@ PKU一键出入校备案小工具 v2.3 (2021.1.10)
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
 - 采用 `PhantomJS` 无头浏览器作为 `driver` ，相较 `Chrome` 、`Firefox` 等浏览器更为轻量化，且运行快速
 - 支持设置在运行结束后返回历史备案页面截图，无需自行登录查看备案结果
-- 支持基于[Server酱](https://sc.ftqq.com/)的备案结果微信推送功能，体验更佳
+- 支持基于[Server酱](https://sct.ftqq.com/)的备案结果微信推送功能，体验更佳
 - 采用定时任务可实现定期（如每日）免打扰填报
 - 第三方依赖包几乎只有 `selenium` 一个，从下到用贼jr快
 
@@ -71,7 +71,7 @@ pip3 install selenium
 
 ## 微信推送
 
-本项目支持基于[Server酱](https://sc.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
+本项目支持基于[Server酱](https://sct.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
 
 ## 补充说明
 
