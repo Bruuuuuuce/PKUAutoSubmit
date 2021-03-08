@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     print('Driver Launching...')
 
-    driver_pjs = webdriver.PhantomJS(executable_path=sys_path())
+    driver_pjs = webdriver.PhantomJS(executable_path=sys_path(), service_args=['--ignore-ssl-errors=true','--ssl-protocol=TLSv1'])
     run(driver_pjs, userName, password, campus, reason, destination, track,
         habitation, district, street, capture, path, wechat, sckey)
     driver_pjs.quit()
