@@ -83,7 +83,7 @@ pip3 install selenium
 
 本项目支持基于[Server酱](https://sc.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
 
-**Note:** 因微信将于4月底下线模板消息功能，届时推送功能也将同步更新为 [Server酱-Turbo](https://sct.ftqq.com/)。所以有微信推送需求的小伙伴们可以提前做好准备，并关注本项目的未来版本
+**Note:** 因微信将于4月底下线模板消息功能，届时推送功能也将同步更新为[Server酱-Turbo](https://sct.ftqq.com/)。所以有微信推送需求的小伙伴们可以提前做好准备，并关注本项目的未来版本
 
 ## 补充说明
 
