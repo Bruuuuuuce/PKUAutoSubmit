@@ -107,7 +107,7 @@ pip3 install selenium
 ### version 3.0
 
 - 发布于 2020.3.10
-- 支持多人填报
+- 支持多人同时填报
 - 修复 driver 启动时可能出现的问题（感谢 AOZMH 的 contribution）
 - 优化运行稳定性
 
