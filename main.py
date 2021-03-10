@@ -51,7 +51,7 @@ if __name__ == '__main__':
     ],
         key=lambda x: int(re.findall(r'[0-9]+', x)[0]))
 
-    print(f'获取到{len(lst_conf)+1}个学生信息\n')
+    print(f'读取到{len(lst_conf)+1}份配置文件\n')
     print('||第1个学生备案||')
     go('config.ini')
 
