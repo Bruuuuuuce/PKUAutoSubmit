@@ -37,7 +37,7 @@ PKU一键出入校备案小工具 v3.0 (2021.3.10)
 
 #### selenium
 
-采用如下语句安装 `selenium`，支持 2.48.0 及以上版本：
+采用如下命令安装 `selenium`，支持 2.48.0 及以上版本：
 
 ```
 pip3 install selenium
@@ -106,7 +106,7 @@ pip3 install selenium
 
 ### version 3.0
 
-- 发布于 2020.3.10
+- 发布于 2021.3.10
 - 支持多人同时填报
 - 修复 driver 启动时可能出现的问题（感谢 AOZMH 的 contribution）
 - 优化运行稳定性
