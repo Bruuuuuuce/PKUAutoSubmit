@@ -15,7 +15,7 @@ def sys_path(browser):
     if sys.platform.startswith('win'):
         return path + f'{browser}.exe'
     elif sys.platform.startswith('linux'):
-        return path + f'{browser}-linux'
+        return path + f'{browser}'
     elif sys.platform.startswith('darwin'):
         return path + f'{browser}'
     else:
