@@ -1,7 +1,9 @@
 # PKUAutoSubmit
-PKU一键出入校备案小工具 v3.0 (2021.3.10)
+PKU一键出入校备案小工具 v3.0 (2021.10.19)
 
-### 注意：出入校政策改回备案制，经测试该项目可继续正常使用（2021.3.8）
+### 注意：近期发现 PhantomJS 在登陆环节出现问题，经 mickelliu 测试替换为 ChromeDriver 可继续使用。由于已毕业离校无法使用完整的 portal 进行进一步测试，同时绝大部分同学已完成疫苗接种无需进行报备，作者就此停止对本项目的更新，最终的 commit 由 mickelliu 完成。各位仍需使用本项目的同学请更新源码与 driver，同时非 Windows 系统的请于[此处](http://chromedriver.storage.googleapis.com/index.html)下载对应版本的 ChromeDriver 放入 `chromedriver/bin` 目录。
+
+### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进
 
@@ -9,16 +11,11 @@ PKU一键出入校备案小工具 v3.0 (2021.3.10)
 
 **Note:** 本项目的[GitHub Actions 自动运行版本](https://github.com/YOUSIKI/PKUAutoSubmit-action)，膜 YOUSIKI 大佬
 
-**Note:** 本项目已上传至[北大网盘](https://disk.pku.edu.cn/#/link/238B48AD673833F65A9EE34181654B07)，与 GitHub 保持同步更新
-
 **Note:** 已发布 Windows、Linux 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘，如果仅需要使用可直接下载相应的 release
-
-**Note:** 为保证 repo 的轻便，不再于源码部分加入 Linux 版本的 `PhantomJS` ，若有需要请下载对应的 release，或于[官网](https://phantomjs.org/download.html)下载
 
 ## 说明
 
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
-- 采用 `PhantomJS` 无头浏览器作为 `driver` ，相较 `Chrome` 、`Firefox` 等浏览器更为轻量化，且运行快速
 - 支持多个配置文件，可在一个进程内同时进行多人填报
 - 支持设置在运行结束后返回历史备案页面截图，无需自行登录查看备案结果
 - 支持基于[Server酱](https://sc.ftqq.com/)的备案结果微信推送功能，体验更佳
@@ -90,7 +87,7 @@ pip3 install selenium
 - 本项目主要为校内日常出入的同学提供便捷解决方案，会同时填报出校与入校备案，不支持单独填报，也不支持京外返校填报。若有此类特殊需求，烦请手动填报
 - `PhantomJS` 作为经典的轻量级无头浏览器，相较 `Chrome` 等大型浏览器体量小的多，不占空间且运行快速。但是由于其本身属性也可能造成一系列问题，如：
    - 由于仅为练手项目，对于学校土豆服务器造成的各类玄学问题作者只能尽力避免，但并无完善的 Exception 处理机制，若遇到报错欢迎 issue，且万能的重来一次大法可以解决绝大多数问题
-   - 可能某天 `selenium` 对 `PhantomJS` 停止了支持，那到了那天再想别的办法
+   - 可能某天 `selenium` 对 `PhantomJS` 停止了支持，那到了那天再想别的办法（果然到这天了）
 - 当前看来，无论出不出学校都可以填报备案，所以每天定时运行一次并没有什么问题（事实上，作者在测试阶段每天填几十次，希望人没事.jpg）
 
 ## 责任须知
