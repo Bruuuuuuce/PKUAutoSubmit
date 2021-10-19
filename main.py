@@ -1,6 +1,7 @@
 # -*- coding: utf-8
 import env_check
 from configparser import ConfigParser
+from selenium.webdriver.chrome.options import Options
 from func import *
 import warnings
 import sys
@@ -9,14 +10,14 @@ import re
 warnings.filterwarnings('ignore')
 
 
-def sys_path():
-    path = './phantomjs/bin/'
+def sys_path(browser):
+    path = f'./{browser}/bin/'
     if sys.platform.startswith('win'):
-        return path + 'phantomjs.exe'
+        return path + f'{browser}.exe'
     elif sys.platform.startswith('linux'):
-        return path + 'phantomjs-linux'
+        return path + f'{browser}-linux'
     elif sys.platform.startswith('darwin'):
-        return path + 'phantomjs'
+        return path + f'{browser}'
     else:
         raise Exception('暂不支持该系统')
 
@@ -39,10 +40,17 @@ def go(config):
 
 
 if __name__ == '__main__':
-    print('Driver Launching...')
-    driver_pjs = webdriver.PhantomJS(
-        executable_path=sys_path(),
-        service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
+
+    # driver_pjs = webdriver.PhantomJS(
+    #     executable_path=sys_path(browser="phantomjs"),
+    #     service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
+
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver_pjs = webdriver.Chrome(
+            options=chrome_options,
+            executable_path=sys_path(browser="chromedriver"),
+            service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
     print('Driver Launched\n')
 
     lst_conf = sorted([
