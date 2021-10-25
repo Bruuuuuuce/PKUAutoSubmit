@@ -1,8 +1,6 @@
 # PKUAutoSubmit
 PKU一键出入校备案小工具 v3.0 (2021.10.19)
 
-### 注意：近期发现 PhantomJS 在登陆环节出现问题，经 mickelliu 测试替换为 ChromeDriver 可继续使用。由于已毕业离校无法使用完整的 portal 进行进一步测试，同时绝大部分同学已完成疫苗接种无需进行报备，作者就此停止对本项目的更新，最终的 commit 由 mickelliu 完成。各位仍需使用本项目的同学请更新源码与 driver，同时非 Windows 系统的请于[此处](http://chromedriver.storage.googleapis.com/index.html)下载对应版本的 ChromeDriver 放入 `chromedriver/bin` 目录
-
 ### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进

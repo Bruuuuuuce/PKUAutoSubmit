@@ -2,3 +2,4 @@ config.ini
 __pycache__
 .DS_Store
 ghostdriver.log
+phantomjs/bin/phantomjs-2.1.1-linux-x86_64
