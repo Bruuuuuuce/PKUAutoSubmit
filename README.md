@@ -7,7 +7,7 @@ PKU一键出入校备案小工具 v3.1 (2021.11.6)
 
 -  `phantomjs` 等 `driver` 问题可尝试 `chromedriver` 并取消注释 `main.py` 的相应代码
 
--  portal未绑定手机时会出现错误，请参考[#31](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/31)
+-  portal 未绑定手机时会出现错误，请参考[#31](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/31)
 
 ### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
