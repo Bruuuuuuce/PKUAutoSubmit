@@ -11,7 +11,6 @@ PKU一键出入校备案小工具 v3.1 (2021.11.6)
 
 **Note:** 本项目的[GitHub Actions 自动运行版本](https://github.com/YOUSIKI/PKUAutoSubmit-action)，膜 YOUSIKI 大佬
 
-**Note:** 已发布 Windows、Linux 和 mac OS 系统对应的 release，同时[win版本](https://disk.pku.edu.cn:443/link/2BBC855503C63E8F226E5B4D06E39340)和[mac版本](https://disk.pku.edu.cn:443/link/BC1F69A1E726726965C125338C61FA98)已上传至北大网盘，如果仅需要使用可直接下载相应的 release
 
 ## 说明
 
