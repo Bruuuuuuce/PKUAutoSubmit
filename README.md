@@ -1,5 +1,7 @@
 # PKUAutoSubmit
-PKU一键出入校备案小工具 v3.0 (2021.10.19)
+PKU一键出入校备案小工具 v3.1 (2021.11.6)
+
+### 听闻近期由于疫情原因恢复了报备制度，然而由于作者已毕业离校，无法访问完整的 portal 功能进行测试及维护。往后的更新基本仅来源于在校学生的 PR 并无法进行完整测试，建议 fork 后根据自身情况（如 `phantomjs` 等 `driver` 问题）参考 issue 进行完善
 
 ### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
@@ -98,6 +100,11 @@ pip3 install selenium
 [Apache License 2.0](https://github.com/Bruuuuuuce/PKUAutoSubmit/blob/main/LICENSE)
 
 ## 版本历史
+
+### version 3.1
+
+- 发布于 2021.11.6
+- 更新了 phantomjs 版本（感谢 David Wang 的 contribution）
 
 ### version 3.0
 
