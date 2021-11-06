@@ -103,7 +103,7 @@ pip3 install selenium
 ### version 3.1
 
 - 发布于 2021.11.6
-- 更新了 phantomjs 版本（感谢 David Wang 的 contribution）
+- 更新了 Linux 的 phantomjs 版本（感谢 David Wang 的 contribution）
 
 ### version 3.0
 
