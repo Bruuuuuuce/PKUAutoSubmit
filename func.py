@@ -43,7 +43,8 @@ def login(driver, userName, password, retry=0):
 
 
 def go_to_simso(driver):
-    driver.find_element_by_id('all').click()
+    butt_all = driver.find_element_by_id('all')
+    driver.execute_script('arguments[0].click();', butt_all)
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.ID, 'tag_s_stuCampusExEnReq')))
     driver.find_element_by_id('tag_s_stuCampusExEnReq').click()
