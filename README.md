@@ -1,7 +1,13 @@
 # PKUAutoSubmit
 PKU一键出入校备案小工具 v3.1 (2021.11.6)
 
-### 听闻近期由于疫情原因恢复了报备制度，然而由于作者已毕业离校，无法访问完整的 portal 功能进行测试及维护。往后的更新基本仅来源于在校学生的 PR 并无法进行完整测试，建议 fork 后根据自身情况（如 `phantomjs` 等 `driver` 问题可尝试 `chromedriver` 并取消注释 `main.py` 的相应代码）参考 issue 进行完善
+### 听闻近期由于疫情原因恢复了报备制度，然而由于作者已毕业离校，无法访问完整的 portal 功能进行测试及维护。往后的更新基本仅来源于在校学生的 PR 并无法进行完整测试，建议 fork 后根据自身情况参考 issue 进行完善
+
+已知问题：
+
+-  `phantomjs` 等 `driver` 问题可尝试 `chromedriver` 并取消注释 `main.py` 的相应代码
+
+-  portal未绑定手机时会出现错误，请参考[#31](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/31)
 
 ### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
