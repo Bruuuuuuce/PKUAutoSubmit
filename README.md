@@ -1,8 +1,6 @@
 # PKUAutoSubmit
 PKU一键出入校备案小工具 v3.0 (2021.10.19)
 
-### 注意：近期发现 PhantomJS 在登陆环节出现问题，经 mickelliu 测试替换为 ChromeDriver 可继续使用。由于已毕业离校无法使用完整的 portal 进行进一步测试，同时绝大部分同学已完成疫苗接种无需进行报备，作者就此停止对本项目的更新，最终的 commit 由 mickelliu 完成。各位仍需使用本项目的同学请更新源码与 driver，同时非 Windows 系统的请于[此处](http://chromedriver.storage.googleapis.com/index.html)下载对应版本的 ChromeDriver 放入 `chromedriver/bin` 目录
-
 ### 感谢同学们的支持，祝大家一切顺利，学业有成！
 
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进
@@ -18,7 +16,7 @@ PKU一键出入校备案小工具 v3.0 (2021.10.19)
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
 - 支持多个配置文件，可在一个进程内同时进行多人填报
 - 支持设置在运行结束后返回历史备案页面截图，无需自行登录查看备案结果
-- 支持基于[Server酱](https://sc.ftqq.com/)的备案结果微信推送功能，体验更佳
+- 支持基于[Server酱](https://sct.ftqq.com/)的备案结果微信推送功能，体验更佳
 - 采用定时任务可实现定期（如每日）免打扰填报
 - 第三方依赖包几乎只有 `selenium` 一个，从下到用贼jr快
 
@@ -78,7 +76,7 @@ pip3 install selenium
 
 ## 微信推送
 
-本项目支持基于[Server酱](https://sc.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
+本项目支持基于[Server酱](https://sct.ftqq.com/)的微信推送功能，仅需登录并扫码绑定，之后将获取到的 SCKEY 填入 `config.ini` 文件即可
 
 **Note:** 因微信将于4月底下线模板消息功能，届时推送功能也将同步更新为[Server酱-Turbo](https://sct.ftqq.com/)。所以有微信推送需求的小伙伴们可以提前做好准备，并关注本项目的未来版本
 
