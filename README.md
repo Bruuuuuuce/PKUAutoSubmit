@@ -14,10 +14,12 @@ PKU一键出入校备案小工具 v3.1 (2021.11.6)
 为作者的第一个 `selenium` 练手小项目，完善程度较低，欢迎任意类型的使用与开发改进
 
 
+### 利用 GitHub Actions 自动运行
+fork 本仓库后，在 [config.sample.ini](config.sample.ini) 中修改除学号密码以外的参数
 
-**Note:** 本项目的[GitHub Actions 自动运行版本](https://github.com/YOUSIKI/PKUAutoSubmit-action)，膜 YOUSIKI 大佬
+然后在自己仓库的 settings->secrets->New repository secret 中新建 Name 为 STUDENTNUM， Value 为学号；Name 为 passwd，Value为密码
 
-
+默认每天晚上0点起每四个小时跑一次，可能会运行失败。
 ## 说明
 
 - 本工具采用 Python3 搭配 `selenium` 完成自动化操作，实现全自动填报学生出入校备案，为频繁出入校的 PKU 学子（不频繁也行）提供较为便捷的解决方案
