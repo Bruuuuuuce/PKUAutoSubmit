@@ -5,7 +5,7 @@ PKU一键出入校备案小工具 v3.2 (2021.11.15)
 
 **已知问题**：
 
--  `PhantomJS` 等 `driver` 问题可尝试 `chromedriver` 并取消注释 `main.py` 的相应代码
+-  `PhantomJS` 等 `driver` 问题可尝试 `chromedriver` 并取消注释 `main.py` 的相应代码，参考[PR#40](https://github.com/Bruuuuuuce/PKUAutoSubmit/pull/40)
 -  portal 未绑定手机时会出现错误，参考[#31](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/31)
 -  最新版本 `selenium` 已停止对 `PhantomJS` 的支持， `2.48.0` 及 `3.8.0` 版本测试正常，参考[#35](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/35)
 -  发行版 `v3.0` 可能出现登录问题，请采用最新 repo 或发行版，参考[#35](https://github.com/Bruuuuuuce/PKUAutoSubmit/issues/35)
