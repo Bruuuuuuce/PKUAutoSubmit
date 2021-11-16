@@ -41,6 +41,12 @@ PKU一键出入校备案小工具 v3.2 (2021.11.15)
 pip3 install selenium==2.48.0
 ```
 
+#### webdriver_manager
+
+```
+pip3 install webdriver_manager
+```
+
 然后就没了。惊不惊喜？意不意外？
 
 ## 基本用法
